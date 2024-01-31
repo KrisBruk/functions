@@ -1,0 +1,57 @@
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int[] CreateArray(int size, int min, int max)
+        {
+            int i = 0;
+            int[] array = new int[size];
+
+            if (i < size)
+            {
+                array[i] = new Random().Next(min, max + 1);
+            }
+                return array;
+            
+            //Console.Write(array([i]));
+            //CreateArray(array, i + 1);
+
+        }
+        void ShowArray(int[] array)
+        {
+            foreach (int e in array)
+            {
+                Console.Write($"{array[e]} ");
+            }
+        }
+
+        Console.WriteLine("Введите размер массива ");
+        int size1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите минимальное значение массива ");
+        int min1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите максимальное значение массива ");
+        int max1 = Convert.ToInt32(Console.ReadLine());
+
+        int[] array = CreateArray(size1, min1, max1);
+        ShowArray(array);
+    }
+}
+
+
+//int [] arr = [1,2,3,4,5];
+// class Program
+// {
+
+// static void PrinArray(int[] myArray, int i = 0)
+// {
+
+//     if (i < myArray.Length)
+//     {
+//         Console.WriteLine(myArray([i]));
+//         PritArray(myArray, i + 1);
+//     }
+
+
+// }
+// }
